@@ -1,4 +1,4 @@
 [submodule "timetracking"]
 	path = timetracking
 	url = https://github.com/mbrugger/timetracking.git
-	branch = develop
+	branch = master
