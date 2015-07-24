@@ -19,8 +19,6 @@ RUN chown -R app:app /home/app/timetracking-webapp
 RUN bundle install --without heroku
 RUN sudo -u app RAILS_ENV=production DATABASE_TYPE=mysql SECRET_KEY_BASE=dummy bundle exec rake assets:precompile
 
-RUN sudo -u app -E bash -c 'whenever --update-crontab'
-
 RUN mkdir -p /etc/my_init.d
 ADD prepare_env.sh /etc/my_init.d/prepare_env.sh
 

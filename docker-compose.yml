@@ -1,13 +1,13 @@
 #data:
 #    image: mbrugger/data:latest
-mysql:
-    image: mysql:latest
-    volumes_from:
-      - "data"
+#mysql:
+#    image: mysql:latest
+#    volumes_from:
+#      - "data"
 timetracking:
   image: mbrugger/timetracking-docker:latest
   ports:
       - "3000:80"
-  links:
-      - mysql:db
+#  links:
+#      - mysql:db
   env_file: timetracking.env
